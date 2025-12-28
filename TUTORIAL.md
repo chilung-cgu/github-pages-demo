@@ -120,8 +120,9 @@ git push -u origin main
 3. 在左側選單中點擊 **Pages**
 4. 在 **Source** 區塊：
    - 選擇 **GitHub Actions**
-
-   ![GitHub Pages Settings](https://docs.github.com/assets/cb-12524/mw-1440/images/help/pages/pages-source-actions.webp)
+   
+   > 📍 **位置說明**：在 Pages 設定頁面，你會看到 "Build and deployment" 區塊，
+   > 下方有 "Source" 選項，點擊下拉選單選擇 "GitHub Actions"
 
 5. 設定完成後，GitHub 會開始第一次部署
 
