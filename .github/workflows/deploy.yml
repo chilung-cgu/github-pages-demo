@@ -1,0 +1,55 @@
+# 部署靜態網站到 GitHub Pages
+#
+# 這個工作流程會在推送到 main 分支時自動執行
+# 它會將網站部署到 GitHub Pages
+
+name: Deploy to GitHub Pages
+
+on:
+  # 當推送到 main 分支時觸發
+  push:
+    branches: ["main"]
+  
+  # 允許手動從 Actions tab 觸發
+  workflow_dispatch:
+
+# 設定 GITHUB_TOKEN 的權限
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# 只允許一個部署同時進行
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  # 部署工作
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    
+    runs-on: ubuntu-latest
+    
+    steps:
+      # 步驟 1: 檢出程式碼
+      - name: Checkout
+        uses: actions/checkout@v4
+      
+      # 步驟 2: 設定 GitHub Pages
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+      
+      # 步驟 3: 上傳網站檔案
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # 上傳整個 repository（根目錄）
+          path: '.'
+      
+      # 步驟 4: 部署到 GitHub Pages
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

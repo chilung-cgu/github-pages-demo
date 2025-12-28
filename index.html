@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="我的 GitHub Pages 學習專案 - 學習如何使用 GitHub Pages 和 GitHub Actions">
+    <title>GitHub Pages Demo | chilung-cgu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="hero">
+            <div class="hero-content">
+                <h1 class="title">
+                    <span class="wave">👋</span> Welcome to My GitHub Pages
+                </h1>
+                <p class="subtitle">這是我的第一個 GitHub Pages 網站</p>
+                <p class="author">by <a href="https://github.com/chilung-cgu" target="_blank">@chilung-cgu</a></p>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <section class="card">
+                <div class="card-icon">🚀</div>
+                <h2>什麼是 GitHub Pages?</h2>
+                <p>GitHub Pages 是 GitHub 提供的免費靜態網站託管服務。你可以直接從 GitHub repository 發布網站，無需額外的伺服器或複雜的設定。</p>
+            </section>
+
+            <section class="card">
+                <div class="card-icon">🤖</div>
+                <h2>什麼是 GitHub Actions?</h2>
+                <p>GitHub Actions 是 GitHub 的 CI/CD 自動化工具。當你推送程式碼時，它會自動執行預設的工作流程，例如自動部署網站。</p>
+            </section>
+
+            <section class="card">
+                <div class="card-icon">✨</div>
+                <h2>這個專案展示了什麼?</h2>
+                <p>這個專案結合了 GitHub Pages 和 GitHub Actions，實現了自動化部署。每當你推送更新到 main 分支，網站就會自動更新！</p>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>
+                Built with ❤️ using 
+                <a href="https://pages.github.com/" target="_blank">GitHub Pages</a> 
+                & 
+                <a href="https://github.com/features/actions" target="_blank">GitHub Actions</a>
+            </p>
+            <p class="timestamp">Last updated: <span id="update-time"></span></p>
+        </footer>
+    </div>
+
+    <script>
+        // 顯示頁面載入時間
+        document.getElementById('update-time').textContent = new Date().toLocaleString('zh-TW');
+    </script>
+</body>
+</html>
