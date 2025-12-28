@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <title>GitHub Pages Demo | chilung-cgu</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="container">
         <header class="hero">
@@ -15,6 +17,7 @@
                     <span class="wave">👋</span> Welcome to My GitHub Pages
                 </h1>
                 <p class="subtitle">這是我的第一個 GitHub Pages 網站</p>
+                <p class="subtitle">New Line, 測試GitHub Actions自動部署</p>
                 <p class="author">by <a href="https://github.com/chilung-cgu" target="_blank">@chilung-cgu</a></p>
             </div>
         </header>
@@ -41,9 +44,9 @@
 
         <footer class="footer">
             <p>
-                Built with ❤️ using 
-                <a href="https://pages.github.com/" target="_blank">GitHub Pages</a> 
-                & 
+                Built with ❤️ using
+                <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>
+                &
                 <a href="https://github.com/features/actions" target="_blank">GitHub Actions</a>
             </p>
             <p class="timestamp">Last updated: <span id="update-time"></span></p>
@@ -55,4 +58,5 @@
         document.getElementById('update-time').textContent = new Date().toLocaleString('zh-TW');
     </script>
 </body>
+
 </html>
